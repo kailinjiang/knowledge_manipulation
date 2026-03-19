@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![# LLaMA Factory](assets/logo.png)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=social)](https://github.com/hiyouga/LLaMA-Factory/stargazers)
@@ -956,3 +957,6 @@ This repo benefits from [PEFT](https://github.com/huggingface/peft), [TRL](https
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=hiyouga/LLaMA-Factory&type=Date)
+=======
+# knowledge_manipulation
+>>>>>>> 863f4d5b42db4b6c02bc4b71bb5ab470f8c30d7b
