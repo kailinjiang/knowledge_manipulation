@@ -1,0 +1,49 @@
+### model
+model_name_or_path: llava-hf/llava-1.5-7b-hf
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+# use_eaft_loss: true
+
+# use_dft_loss: true
+
+# use_asft_loss: true
+# asft_alpha: 0.1 
+
+use_kore_loss: true
+kore_alpha: 0.1
+kore_beta: 1
+
+
+lora_rank: 4
+lora_target: all
+
+### dataset
+dataset: mllm_demo_test
+template: llava
+cutoff_len: 1024
+max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: /data/jiangkl/data_ckpt/train_ckpt/InternVL3-2B-hf-test/lora/sft
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 0.0001
+num_train_epochs: 50.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+fp16: true
+train_mm_proj_only: false
+
+### eval
+do_eval: false
