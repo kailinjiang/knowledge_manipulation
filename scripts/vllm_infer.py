@@ -122,7 +122,16 @@ def vllm_infer(
         engine_args.update(model_args.vllm_config)
 
     model_preparation_start_time = time.time()
-    llm = LLM(**engine_args)
+    try:
+        llm = LLM(**engine_args)
+    except ValueError as e:
+        # Some vLLM builds/models raise this when `limit_mm_per_prompt` is provided
+        # but the model is not detected as multimodal. Retry without this option.
+        if "limit_mm_per_prompt" in engine_args and "only supported for multimodal models" in str(e):
+            engine_args.pop("limit_mm_per_prompt", None)
+            llm = LLM(**engine_args)
+        else:
+            raise
 
     # load datasets
     dataset_module = get_dataset(template_obj, model_args, data_args, training_args, "ppo", **tokenizer_module)

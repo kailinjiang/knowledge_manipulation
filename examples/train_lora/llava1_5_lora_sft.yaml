@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: /data/jiangkl/data_ckpt/ckpt/llava-1.5-7b-hf
+model_name_or_path: /data/user/jiangkailin/data_ckpt/ckpt/llava-1.5-7b-hf
 # image_max_pixels: 262144
 # video_max_pixels: 16384
 trust_remote_code: true
@@ -34,7 +34,7 @@ preprocessing_num_workers: 16
 dataloader_num_workers: 4
 
 ### output
-output_dir: /data/jiangkl/data_ckpt/ckpt/train_ckpt/llava-1.5-7b-hf
+output_dir: /data/user/jiangkailin/data_ckpt/train_ckpt/llava-1.5-7b-hf
 logging_steps: 10
 save_steps: 500
 plot_loss: true

@@ -38,6 +38,28 @@
       "assistant_tag": "assistant"
     }
   },
+  "MMEVOKE": {
+    "file_name": "/data/user/jiangkailin/data_ckpt/data/MMEVOKE/evoke_injection_data_llamafactory.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "MMEVOKE_eval": {
+    "file_name": "/data/user/jiangkailin/data_ckpt/data/MMEVOKE/evoke_evaluation_data_llamafactory.json",
+    "columns": {
+      "prompt": "text",
+      "response": "answer",
+      "images": "image"
+    }
+  },
   "mllm_demo_test": {
     "file_name": "mllm_demo_test.json",
     "formatting": "sharegpt",
